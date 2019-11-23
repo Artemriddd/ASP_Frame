@@ -1,0 +1,188 @@
+﻿@model FrameAll
+<form asp-controller="Home" asp-action="Index" method="post">
+    <div class="image">
+        <img class="image_1" src="~/images/se4.jpg" />
+    </div>
+    <div class="image">
+        <img class="image_2" src="~/images/Shp2.jpg" />
+    </div>
+    <div class="left_block">
+        <div class="row customrow">
+            <h3>Геометрия</h3>
+        </div>
+        <div class="row">
+            <label asp-for="SetinsideBelt" class="col-lg-7">Ширина внут. пояса, мм</label>
+            <input type="number" asp-for="SetinsideBelt" class="col-lg-2" />
+        </div>
+        <div class="row">
+            <label asp-for="SetoutsideBelt" class="col-lg-7">Ширина внеш. пояса, мм</label>
+            <input type="number" asp-for="SetoutsideBelt" class="col-lg-2" />
+        </div>
+        <div class="row">
+            <label asp-for="SetframeWall" class="col-lg-7">Высота стенки, мм</label>
+            <input type="number" asp-for="SetframeWall" class="col-lg-2" />
+        </div>
+        <div class="row">
+            <label asp-for="SetticknessinsideBelt" class="col-lg-7">Толщина внут. пояса, мм</label>
+            <input type="number" asp-for="SetticknessinsideBelt" class="col-lg-2" />
+        </div>
+        <div class="row">
+            <label asp-for="SetticknessoutsideBelt" class="col-lg-7">Толщина внеш. пояса, мм</label>
+            <input type="number" asp-for="SetticknessoutsideBelt" class="col-lg-2" />
+        </div>
+        <div class="row">
+            <label asp-for="SetticknessframeWall" class="col-lg-7">Толщина стенки, мм</label>
+            <input type="number" asp-for="SetticknessframeWall" class="col-lg-2" />
+        </div>
+        <div class="row">
+            <label asp-for="SetSkinTickness" class="col-lg-7">Толщина обшивки, мм</label>
+            <input type="number" asp-for="SetSkinTickness" class="col-lg-2" />
+        </div>
+        <div class="row">
+            <label asp-for="SetskinCoef" class="col-lg-7">Коэфф. устойчивости обшивки</label>
+            <input type="number" asp-for="SetskinCoef" class="col-lg-2" />
+        </div>
+        <div class="row">
+            <label asp-for="SetskinWidth" class="col-lg-7">Ширина клетки обшивки, мм</label>
+            <input type="number" asp-for="SetskinWidth" class="col-lg-2" />
+        </div>
+        <div class="row">
+            <label asp-for="SetskinHeight" class="col-lg-7">Высота клетки обшивки, мм</label>
+            <input type="number" asp-for="SetskinHeight" class="col-lg-2" />
+        </div>
+        <div class="row customrow">
+            <h3>Свойства материалов</h3>
+        </div>
+        <div class="row">
+            <label asp-for="SetskinElasticModule" class="col-lg-7">Модуль упругости мат. обшивки, кгс/мм2</label>
+            <input type="number" asp-for="SetskinElasticModule" class="col-lg-2" />
+        </div>
+        <div class="row">
+            <label asp-for="SetskinSigma02" class="col-lg-7">Предел текучести мат. обшивки, кгс/мм2</label>
+            <input type="number" asp-for="SetskinSigma02" class="col-lg-2" />
+        </div>
+        <div class="row">
+            <label asp-for="SetskinSigmaB" class="col-lg-7">Предел прочности мат. обшивки, кгс/мм2</label>
+            <input type="number" asp-for="SetskinSigmaB" class="col-lg-2" />
+        </div>
+        <div class="row">
+            <label asp-for="SetframeElasticModule" class="col-lg-7">Модуль упругости мат. шпангоута, кгс/мм2</label>
+            <input type="number" asp-for="SetframeElasticModule" class="col-lg-2" />
+        </div>
+        <div class="row">
+            <label asp-for="SetframeSigma02" class="col-lg-7">Предел текучести мат. шпангоута, кгс/мм2</label>
+            <input type="number" asp-for="SetframeSigma02" class="col-lg-2" />
+        </div>
+        <div class="row">
+            <label asp-for="SetframeSigmaB" class="col-lg-7">Предел прочности мат. шпангоута, кгс/мм2</label>
+            <input type="number" asp-for="SetframeSigmaB" class="col-lg-2" />
+        </div>
+        <div class="row customrow">
+            <h3>Нагрузки</h3>
+        </div>
+        <div class="row">
+            <label asp-for="SetframeMoment" class="col-lg-7">Изгибающий момент, кгс*мм</label>
+            <input type="number" asp-for="SetframeMoment" class="col-lg-2" />
+        </div>
+        <div class="row">
+            <label asp-for="SetframeNormalForce" class="col-lg-7">Норм. сила по шпангоуту, кгс</label>
+            <input type="number" asp-for="SetframeNormalForce" class="col-lg-2" />
+        </div>
+        <div class="row">
+            <label asp-for="SetframeShearForce" class="col-lg-7">Сдвиг. сила по шпангоуту, кгс</label>
+            <input type="number" asp-for="SetframeShearForce" class="col-lg-2" />
+        </div>
+        <div class="row">
+            <label asp-for="SetskinNormalForce" class="col-lg-7">Норм. сила по обшивке, кгс</label>
+            <input type="number" asp-for="SetskinNormalForce" class="col-lg-2" />
+        </div>
+    </div>
+    <div class="right_block">
+        <div class="row customrow">
+            <h3>Результаты</h3>
+        </div>
+        <div class="row">
+            <label asp-for="skinBuck" class="col-lg-7">Потеря устойчивости обшивки</label>
+            <input type="text" disabled="disabled" class="col-lg-3" asp-for="skinBuck" />
+        </div>
+        <div class="row">
+            <label asp-for="criticalForce" class="col-lg-7">Крит. усилия по обшивке, кгс</label>
+            <input type="number" disabled="disabled" class="col-lg-2" asp-for="criticalForce" />
+        </div>
+        <div class="row">
+            <label asp-for="criticalSkinSigma" class="col-lg-7">Крит. напряжения по обшивке, кгс/мм2</label>
+            <input type="number" disabled="disabled" class="col-lg-2" asp-for="criticalSkinSigma" />
+        </div>
+        <div class="row">
+            <label asp-for="SetArea" class="col-lg-7">Площадь эффективного сечения, мм2</label>
+            <input type="number" disabled="disabled" class="col-lg-2" asp-for="SetArea" />
+        </div>
+        <div class="row">
+            <label asp-for="Inertion" class="col-lg-7">Момент инерции эффект. сечения, кгс*мм2</label>
+            <input type="number" disabled="disabled" class="col-lg-2" asp-for="Inertion" />
+        </div>
+        <div class="row">
+            <label asp-for="CentreInertion" class="col-lg-7">Центр тяжести сечения, мм</label>
+            <input type="number" disabled="disabled" class="col-lg-2" asp-for="CentreInertion" />
+        </div>
+        <div class="row">
+            <label asp-for="sigmaN" class="col-lg-7">Нормальные напряжения, кгс/мм2</label>
+            <input type="number" disabled="disabled" class="col-lg-2" asp-for="sigmaN" />
+        </div>
+        <div class="row">
+            <label asp-for="sigmaMomentInsideBelt" class="col-lg-7">Норм. напр. внут. пояса от момента, кгс/мм2</label>
+            <input type="number" disabled="disabled" class="col-lg-2" asp-for="sigmaMomentInsideBelt" />
+        </div>
+        <div class="row">
+            <label asp-for="sigmaMomentOutsideBelt" class="col-lg-7">Норм. напр. внеш. пояса от момента, кгс/мм2</label>
+            <input type="number" disabled="disabled" class="col-lg-2" asp-for="sigmaMomentOutsideBelt" />
+        </div>
+        <div class="row">
+            <label asp-for="sigmaInsideBelt" class="col-lg-7">Норм. напряжения внут пояса, кгс/мм2</label>
+            <input type="number" disabled="disabled" class="col-lg-2" asp-for="sigmaInsideBelt" />
+        </div>
+        <div class="row">
+            <label asp-for="sigmaOutsideBelt" class="col-lg-7">Норм. напряжения внеш пояса, кгс/мм2</label>
+            <input type="number" disabled="disabled" class="col-lg-2" asp-for="sigmaOutsideBelt" />
+        </div>
+        <div class="row">
+            <label asp-for="tau" class="col-lg-7">Сдвиговые напряжения, кгс/мм2</label>
+            <input type="number" disabled="disabled" class="col-lg-2" asp-for="tau" />
+        </div>
+        <div class="row">
+            <label asp-for="sigmaVonMis" class="col-lg-7">Экв. напряжения по Мизесу, кгс/мм2</label>
+            <input type="number" disabled="disabled" class="col-lg-2" asp-for="sigmaVonMis" />
+        </div>
+        <div class="row">
+            <label asp-for="safetyInsideBelt" class="col-lg-7">Коэф. запаса прочности внут. пояса</label>
+            <input type="number" disabled="disabled" class="col-lg-2 redbox" asp-for="safetyInsideBelt" />
+        </div>
+        <div class="row">
+            <label asp-for="safetyOutsideBelt" class="col-lg-7">Коэф. запаса прочности внеш. пояса</label>
+            <input type="number" disabled="disabled" class="col-lg-2 redbox" asp-for="safetyOutsideBelt" />
+        </div>
+        <div class="row">
+            <label asp-for="safetyVonMis" class="col-lg-7">Коэф. запаса по Мизесу</label>
+            <input type="number" disabled="disabled" class="col-lg-2 redbox" asp-for="safetyVonMis" />
+        </div>
+        <div class="row">
+            <label asp-for="criticalInsideBeltSigma" class="col-lg-7">Критические напряжения, кгс/мм2</label>
+            <input type="number" disabled="disabled" class="col-lg-2" asp-for="criticalInsideBeltSigma" />
+        </div>
+        <div class="row">
+            <label asp-for="safetyBuclingInsideBelt" class="col-lg-7">Коэф. запаса мест. устойчивости внут. пояса</label>
+            <input type="number" disabled="disabled" class="col-lg-2 redbox" asp-for="safetyBuclingInsideBelt" />
+        </div>
+        <div class="row">
+            <label asp-for="criticalSigma" class="col-lg-7">Критические напряжения, кгc/мм2</label>
+            <input type="number" disabled="disabled" class="col-lg-2" asp-for="criticalSigma" />
+        </div>
+        <div class="row">
+            <label asp-for="safetyFullBucling" class="col-lg-7">Коэф. запаса общ. потери уст.</label>
+            <input type="number" disabled="disabled" class="col-lg-2 redbox" asp-for="safetyFullBucling" />
+        </div>
+    </div>
+    <div class="row button">
+        <input type="submit" value="Расчет" asp-action="Index" />
+    </div>
+</form>
